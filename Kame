@@ -1,0 +1,44 @@
+local Rayfield = loadstring(game:HttpGet('https://[Log in to view URL]'))()
+local Window = Rayfield:CreateWindow({
+   Name = "shorty 😉",
+   LoadingTitle = "its loading short guy",
+   LoadingSubtitle = "by daddy mhamad",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "free pet"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "get the key first little guy",
+      Subtitle = "just copy and paste in google",
+      Note = "ay qahand get the key first",
+      FileName = "shorthub", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"https://[Log in to view URL]"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("main", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("scripts")
+
+local Button = MainTab:CreateButton({
+   Name = "each click random thing",
+   Callback = function()
+   game:GetService("ReplicatedStorage").DailyEvents.ClaimDaily:FireServer()
+            
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "infinte yield (use if you want shorty)",
+   Callback = function()
+   loadstring(game:HttpGet('https://[Log in to view URL]'))()
+   end,
+})
